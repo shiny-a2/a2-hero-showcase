@@ -4,6 +4,20 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.3.0 — 2026-10-22
+
+Added user-initiated independent sign-in with local, fresh-message OTP matching and
+encrypted session persistence. Verification is bounded to the active attempt and
+cannot silently repeat. Purpose-specific access allows interactive authentication
+and a single manual connection check; background polling and direct acceptance
+remain disabled while session behavior is investigated.
+
+Validation: 76 JVM tests and a debug build passed. Authorized device checks verified
+automatic code entry, encrypted-session restoration and one read-only connection
+check. No customer order was submitted. Token permanence, long-term simultaneous
+sessions and independent acceptance are not claimed. Sensitive account and message
+data remain excluded from this showcase and source history.
+
 ## 1.2.1 — 2026-10-22
 
 Suspended experimental direct networking following a reported session issue. The
