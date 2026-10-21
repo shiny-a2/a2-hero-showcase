@@ -4,6 +4,24 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.2.0 — 2026-10-21
+
+Added independent, read-only network observation alongside the existing monitoring
+workflow. Structured eligibility checks use the user's selected regions, brands and
+working hours, with explicit handling of unknown dates and time-zone conversion.
+Device-held session credentials are encrypted and excluded from backup storage.
+A foreground notification exposes status and a stop control; sequential requests
+respect server retry delays and back off on errors.
+
+This is an observation milestone. Independent network acceptance is not implemented
+or claimed. Keeping a single existing acceptance writer avoids duplicate actions
+while the new path is validated against naturally arriving work.
+
+Validation: 55 JVM tests and the debug build passed. Physical-device authenticated
+empty-list reads, background observation and stop/restart were verified. No live
+customer request was submitted solely for testing. Non-empty live-data parsing,
+long unattended operation and independent acceptance remain unverified.
+
 ## 1.1.0 — 2026-10-21
 
 The update makes active monitoring coexist with the phone's normal secure lock.
@@ -18,7 +36,7 @@ fresh UI controls, with interruption checks for lock, stop, or app changes.
 These changes improve truthful reporting and session reliability. They do not
 guarantee priority over other users or remove upstream/network latency.
 
-## Validation
+## 1.1.0 validation
 
 - 25 JVM regression tests passed, including 6 acceptance-result tests.
 - Debug APK build, XML parsing, shell syntax and whitespace checks passed.
