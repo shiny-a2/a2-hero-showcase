@@ -4,6 +4,17 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.2.1 — 2026-10-22
+
+Suspended experimental direct networking following a reported session issue. The
+cause is still unconfirmed. The update removes Internet permission and rejects all
+network entry points locally, disables observer restart, and removes experimental
+session material. Historical diagnostics remain available. The established on-device
+accessibility workflow is preserved.
+
+Four regression tests exercise blocked login, verification, listing and detail calls.
+No provider request is needed to test these protections.
+
 ## 1.2.0 — 2026-10-21
 
 Added independent, read-only network observation alongside the existing monitoring
