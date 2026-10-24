@@ -14,6 +14,8 @@ All 132 JVM tests and offline builds passed; the updated preview was installed.
 A rejected session required one explicit sign-in; the new session passed a bounded
 read with no incoming jobs. Long-term session stability and live direct acceptance
 remain unqualified. No direct job submission or independent push enrollment occurred.
+The short observer run was stopped afterward, and the existing screen service was
+rebound and verified following instrumentation cleanup.
 
 ## Push feasibility review — 2026-10-24
 
