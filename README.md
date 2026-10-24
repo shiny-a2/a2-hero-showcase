@@ -4,6 +4,13 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## Qualification follow-up — 2026-10-24
+
+A fresh bounded discovery read succeeded with an empty first page. No detail or mutation
+was attempted. Static timing review supports the existing delay-unit conversion, but
+real eligible-detail and allocation outcomes remain unverified. Direct API acceptance
+is still disabled; this is not a final acceptance release.
+
 ## 1.5.9-preview — 2026-10-24
 
 Added customer phone display, dialer handoff and map selection to current/upcoming job
