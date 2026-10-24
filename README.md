@@ -4,6 +4,17 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.22-preview — 2026-10-24
+
+Added bounded receipt-time recovery for identical, freshly rediscovered candidates after
+process recreation. Only hashes and monotonic times are retained, scoped to boot, session
+and run generation. Changed/expired/corrupt state restarts waiting conservatively; fresh
+validation and durable duplicate protection remain required. This does not persist the
+full discovery queue or authorize a write from stale data.
+
+231 JVM tests and offline build passed, including scope/revision changes, expiration,
+storage failure and freshness checks. Live eligible-candidate recovery remains unverified.
+
 ## 1.5.21-preview — 2026-10-24
 
 Follow-up device check: after abrupt process termination, Android restarted the app and
