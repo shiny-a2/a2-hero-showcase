@@ -4,6 +4,18 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.19-preview — 2026-10-24
+
+Separated unknown location data from unselected districts, and expired starts from
+invalid time ranges in eligibility diagnostics. This makes future rejection reports
+actionable without broadening user filters or retaining customer addresses/times.
+Legacy combined reports remain unchanged rather than being retroactively reclassified.
+
+217 JVM tests and offline build passed, including boundary, persistence and privacy
+regressions. Device installation is pending after USB disconnected during deployment.
+Historical false rejection and real eligible
+allocation are not established by these tests.
+
 ## 1.5.18-preview — 2026-10-24
 
 Corrected an overly broad eligibility restriction that treated all nonempty display-label
