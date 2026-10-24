@@ -4,6 +4,16 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.9-preview — 2026-10-24
+
+Added customer phone display, dialer handoff and map selection to current/upcoming job
+details. Invalid or unavailable data disables actions; address search is distinguished
+from precise coordinates. Contact values are excluded from diagnostics.
+
+184 JVM tests and offline builds passed. Installed and visually checked using synthetic
+data on the device. No call was placed; real current-job handoff remains untested.
+Direct API acceptance remains disabled.
+
 ## 1.5.8-preview — 2026-10-24
 
 Fixed ambiguous request diagnostics by separating account, detail and submission routes.
