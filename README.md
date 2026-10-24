@@ -4,6 +4,19 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## Engineering review — 2026-10-24
+
+Reviewed retained field evidence and prepared the implementation/release sequence for
+an independent engine. Existing screen-based discovery was still active; rendering
+waits and periods of manual mode also affected outcomes. The new design requires
+exclusive engine ownership, durable submission records, strict structured eligibility,
+bounded network recovery and explicit outcome reconciliation.
+
+This is a feasibility and release-planning update, not a new deployed version.
+Independent acceptance, non-empty live contract validation and long unattended session
+qualification remain release gates. No account data, raw payloads or provider-specific
+implementation details are included here.
+
 ## 1.3.0 — 2026-10-22
 
 Added user-initiated independent sign-in with local, fresh-message OTP matching and
