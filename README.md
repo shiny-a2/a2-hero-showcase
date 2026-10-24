@@ -4,6 +4,16 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.2-preview — 2026-10-24
+
+Added explicitly enabled automatic read-only observation alongside the existing screen
+acceptance owner. Bounded sanitized reports retain structural facts and filter results
+without customer values. Request serialization, pacing and backoff remain intact.
+
+Validation: 157 JVM tests and offline build passed; installed and successful empty-list
+observation was checked on device. Direct acceptance remains compiled off. Nonempty
+contract semantics, live allocation and provider-equivalent traffic remain unverified.
+
 ## 1.5.1-preview — 2026-10-24
 
 Added an explicit bounded contract probe: one list page and at most one detail, with
