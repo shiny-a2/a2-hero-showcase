@@ -9,6 +9,8 @@ device identifiers, account details, request content, and diagnostics are exclud
 Corrected an unconditional discovery restriction that could hide candidates before local
 policy evaluation. Local acceptance filters and disabled direct writes remain unchanged.
 A live discrepancy motivated the fix, but causality for that individual event is unproven.
+Post-install observation received one item and recorded its structural report; local
+policy rejected it and the standard-pricing check did not pass. No write was attempted.
 
 ## 1.5.5-preview — 2026-10-24
 
