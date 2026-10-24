@@ -4,6 +4,16 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.4.1-preview — 2026-10-24
+
+Refreshed the native dark interface with grouped job cards, collapsible secondary
+settings, consistent action styling and confirmation before local sign-out.
+This reduces visual clutter without changing eligibility or acceptance behavior.
+
+Validation: 118 JVM regression tests and an offline debug build passed. Installed
+in place; physical visual checks remain pending manual device unlock. Light-theme
+support is not claimed. Direct acceptance remains disabled.
+
 ## 1.4.0-preview — 2026-10-24
 
 Added an independent account dashboard with manually refreshed job lists and an
