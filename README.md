@@ -4,6 +4,15 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## Push feasibility review — 2026-10-24
+
+Read-only review identified an additional persistent messaging transport beyond the
+existing REST polling design. A background service was present on the target device;
+this does not establish delivery latency or an independently authorized integration.
+Documented registration isolation, duplicate suppression, authoritative detail checks
+and deadline scheduling as prerequisites. No credentials, push registration changes
+or live submissions were used. The independent acceptance release remains unqualified.
+
 ## Device validation follow-up — 2026-10-24
 
 Verified an existing session through a bounded read, exercised observer stop and
