@@ -4,6 +4,13 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.14-preview — 2026-10-24
+
+Corrected home-screen labels to distinguish an armed single-submission trial from disabled
+continuous acceptance. Installed; home status and assigned-page check time were inspected
+at large font size. Live reads succeeded; real allocation and changed-job events remain
+unverified. 196 JVM tests and offline build passed.
+
 ## 1.5.13-preview — 2026-10-24
 
 Added bounded idle-time observation of assigned-job changes, with generic time/status
