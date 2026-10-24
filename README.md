@@ -4,6 +4,16 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.25-preview — 2026-10-24
+
+Corrected duplicate structured brand answers being concatenated into an unmatched value.
+Identical normalized answers now resolve once; conflicting or malformed brand answers
+remain unknown. User selections and exact-match policy remain intact.
+
+244 JVM tests and offline build passed, covering duplicate questions, language variants,
+malformed/conflicting answers and locale-independent normalization. This parser case was
+reproduced in fixtures; it is not an established cause of recent live rejections.
+
 ## 1.5.24-preview — 2026-10-24
 
 Persisted shared server-error cooldown across process recreation within the same boot.
