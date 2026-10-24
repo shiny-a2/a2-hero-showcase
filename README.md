@@ -4,6 +4,15 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.8-preview — 2026-10-24
+
+Fixed ambiguous request diagnostics by separating account, detail and submission routes.
+A bounded sanitized event history preserves context without identifiers or credentials.
+
+178 JVM tests and offline build passed. Installed; bounded account/history/detail reads
+succeeded with the existing session. A historical access-denied error did not reproduce,
+so its root cause remains unproven. No login or order mutation was performed.
+
 ## 1.5.7-preview — 2026-10-24
 
 Added typed diagnostic facts for pricing qualification while preserving the strict
