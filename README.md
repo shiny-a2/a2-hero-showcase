@@ -4,6 +4,23 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.4.0-preview — 2026-10-24
+
+Added an independent account dashboard with manually refreshed job lists and an
+explicit experimental background observer. Ten specialist reviews informed fixes
+to session invalidation, cancellation, strict filtering, transport isolation,
+private-data protection and truthful UI state. A durable single-attempt submission
+foundation is present, but direct acceptance is compiled off pending live qualification.
+
+Validation: 118 JVM tests and a debug build passed. Authorized physical-device checks
+verified account-list reads, short locked-screen observation and process recovery
+without repeating sign-in. The preview was installed in place. Long unattended
+stability and real direct acceptance are not certified; no test order was submitted.
+Current management views are read-only, not financial or full lifecycle controls.
+
+Production source and account evidence remain private. This update makes no claim
+of permanent sessions, invisibility or guaranteed response priority.
+
 ## Engineering review — 2026-10-24
 
 Reviewed retained field evidence and prepared the implementation/release sequence for
