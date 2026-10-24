@@ -4,6 +4,20 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.28-preview — 2026-10-24
+
+Separated monitoring settings and technical diagnostics from the work dashboard.
+Four visible list choices now focus the dashboard on requests, current/upcoming work,
+history and proposals, with conversations and event history still accessible.
+Opening the dashboard performs one current/upcoming read; further navigation is explicit.
+Selected-list indication and disabled unavailable pagination clarify the current view.
+Existing preferences and guarded acceptance behavior are unchanged.
+
+260 JVM tests and the offline debug build passed. Device checks covered work/settings
+navigation, current-list reads, loading and disabled pagination under both system theme
+settings; the app retains its dark palette. Real eligible allocation remains
+unqualified and continuous acceptance remains disabled.
+
 ## 1.5.27-preview — 2026-10-24
 
 Added searchable neighborhood selections using an authoritative location catalogue,
