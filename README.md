@@ -4,6 +4,16 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.21-preview — 2026-10-24
+
+Connected existing ongoing-job reads to durable pending-submission reconciliation. Exact
+matches produce a separate generic notice while preserving the original outcome and
+duplicate protection. Empty or unrelated pages remain inconclusive. No additional reads
+or acceptance retries are introduced; existing idle scheduling and pagination apply.
+
+225 JVM tests and offline build passed, including restart/deduplication, malformed-page
+and storage-failure cases. Real ambiguous-submission recovery remains unverified.
+
 ## 1.5.20-preview — 2026-10-24
 
 Prepared deadlines now survive read-budget deferral and transient read errors within a
