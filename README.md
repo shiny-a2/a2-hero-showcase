@@ -4,6 +4,15 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.4-preview — 2026-10-24
+
+Corrected list-arrival instrumentation to collect all exposed explicit identities before
+selection and filtering. In-app list timing is the primary comparator; notification
+timing remains separate secondary evidence. No additional network traffic was added.
+
+Validation: 168 JVM tests and offline build passed. Real matched-job timing remains
+pending; this does not establish faster delivery or guaranteed acceptance.
+
 ## 1.5.3-preview — 2026-10-24
 
 Added passive channel-arrival comparisons without additional network traffic. Anonymous
