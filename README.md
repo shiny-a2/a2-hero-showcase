@@ -12,8 +12,8 @@ actionable without broadening user filters or retaining customer addresses/times
 Legacy combined reports remain unchanged rather than being retroactively reclassified.
 
 217 JVM tests and offline build passed, including boundary, persistence and privacy
-regressions. Device installation is pending after USB disconnected during deployment.
-Historical false rejection and real eligible
+regressions. After reconnection, installation succeeded and independent monitoring resumed
+with a fresh successful empty-list read. Historical false rejection and real eligible
 allocation are not established by these tests.
 
 ## 1.5.18-preview — 2026-10-24
