@@ -4,6 +4,16 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.17-preview — 2026-10-24
+
+Prioritized already-due prepared work before new discovery reads and postponed background
+maintenance while a deadline is pending. Fresh validation, server waiting requirements,
+request pacing and duplicate protection remain intact. This removes an avoidable queue
+delay without increasing polling frequency; existing in-flight calls cannot be preempted.
+
+212 JVM tests and offline build passed, including ordering and cancellation regressions.
+Real allocation and end-to-end latency improvements still require live qualification.
+
 ## 1.5.16-preview — 2026-10-24
 
 Added a paginated read-only conversation view, generic unread-message notices and
