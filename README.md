@@ -4,6 +4,17 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.24-preview — 2026-10-24
+
+Persisted shared server-error cooldown across process recreation within the same boot.
+All priorities honor the restored delay; expiration and boot mismatch are checked before
+reuse. Current-process pacing survives persistence errors, but durable recovery then is
+not guaranteed. This does not provide cross-reboot cooldown persistence.
+
+239 JVM tests and offline build passed, using synthetic throttling/server failures to
+verify blocking, cancellation and persistence. No live throttling was deliberately caused;
+real error recovery and eligible allocation remain unverified.
+
 ## 1.5.23-preview — 2026-10-24
 
 Prioritized unread details before cached refreshes and rotated refreshes oldest-first.
