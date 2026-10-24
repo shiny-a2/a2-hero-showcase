@@ -4,6 +4,16 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.23-preview — 2026-10-24
+
+Prioritized unread details before cached refreshes and rotated refreshes oldest-first.
+This prevents repeatedly expired head items from monopolizing the read budget on a stable
+busy list. Due-work priority, pagination, duplicate handling and request limits remain.
+The change does not increase the configured request budget or polling frequency.
+
+235 JVM tests and offline build passed, including slow-cycle coverage and refresh-order
+regressions. Real busy-list latency and eligible allocation remain unverified.
+
 ## 1.5.22-preview — 2026-10-24
 
 Added bounded receipt-time recovery for identical, freshly rediscovered candidates after
