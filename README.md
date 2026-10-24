@@ -10,6 +10,9 @@ Added typed diagnostic facts for pricing qualification while preserving the stri
 submission guard. Reports distinguish absent data from special pricing without storing
 raw values. 175 JVM tests and offline build passed. A session rejection during follow-up
 requires isolated-session validation; direct acceptance remains disabled.
+A fresh isolated session subsequently passed discovery and a short background smoke
+test. Empty lists prevented live pricing and acceptance qualification; long-term session
+stability remains unproven.
 
 ## 1.5.6-preview — 2026-10-24
 
