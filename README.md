@@ -4,6 +4,16 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.11-preview — 2026-10-24
+
+Added categorized local notifications and a bounded in-app event history. Match discovery,
+submission and allocation remain distinct. Contact information is excluded; repeated
+connection failures are suppressed and routine status redraws are throttled separately
+from polling. Notification failures cannot change order outcomes.
+
+187 JVM tests and offline build passed. Direct acceptance and provider-wide chat,
+cancellation and scheduling synchronization remain unqualified or unimplemented.
+
 ## 1.5.10-preview — 2026-10-24
 
 Reduced successful discovery and shared post-request pauses to 500 ms at the user's
