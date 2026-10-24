@@ -4,6 +4,12 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.6-preview — 2026-10-24
+
+Corrected an unconditional discovery restriction that could hide candidates before local
+policy evaluation. Local acceptance filters and disabled direct writes remain unchanged.
+A live discrepancy motivated the fix, but causality for that individual event is unproven.
+
 ## 1.5.5-preview — 2026-10-24
 
 Automatic observation reports now retain fixed policy decision codes and display clear
