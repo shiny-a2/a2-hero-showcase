@@ -4,6 +4,17 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.4.3-preview — 2026-10-24
+
+Prioritized front-page analysis before pagination I/O while preserving a bounded
+read budget and tail coverage. Missing or malformed waiting metadata now remains
+ineligible rather than being defaulted. Added ordering, cancellation, duplicate,
+transport-failure and strict-field regression coverage.
+
+All 129 JVM tests and the offline debug build passed.
+This remains a preview: physical UI and live acceptance qualification are incomplete.
+Direct acceptance remains disabled; no fastest-client or zero-defect claim is made.
+
 ## 1.4.2-preview — 2026-10-24
 
 Made screen observation event-responsive while preserving timeout fallback, loading
