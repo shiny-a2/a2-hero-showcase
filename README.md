@@ -4,6 +4,16 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.13-preview — 2026-10-24
+
+Added bounded idle-time observation of assigned-job changes, with generic time/status
+notifications and a last-page-check indicator. Hashed, session-bound baselines exclude raw
+customer data. Missing jobs and failed reads never become cancellation claims. Discovery
+retains priority; the extra serialized read can still delay the next discovery cycle.
+
+196 JVM tests and offline build passed. Actual changed-job events, cancellation semantics,
+provider messages and reminders remain unqualified or unimplemented.
+
 ## 1.5.12-preview — 2026-10-24
 
 Added an explicitly armed, session-bound single-submission trial while retaining strict
