@@ -4,6 +4,13 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.15-preview — 2026-10-24
+
+Added exact explicit-cancellation display and transition notifications. Missing jobs,
+initial observations and unknown codes never become cancellation claims. No network calls
+were added. 201 JVM tests and offline build passed; live cancellation and terminal-status
+coverage remain unqualified or incomplete.
+
 ## 1.5.14-preview — 2026-10-24
 
 Corrected home-screen labels to distinguish an armed single-submission trial from disabled
