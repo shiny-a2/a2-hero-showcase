@@ -4,6 +4,15 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.5-preview — 2026-10-24
+
+Automatic observation reports now retain fixed policy decision codes and display clear
+rejection explanations. Reasons are whitelisted and legacy reports remain unknown;
+customer content cannot enter this diagnostic field. Eligibility and traffic are unchanged.
+
+Validation: 170 JVM tests and offline build passed. Real nonempty reports remain pending;
+automatic API acceptance remains compiled off.
+
 ## 1.5.4-preview — 2026-10-24
 
 Corrected list-arrival instrumentation to collect all exposed explicit identities before
