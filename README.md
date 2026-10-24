@@ -4,6 +4,13 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.7-preview — 2026-10-24
+
+Added typed diagnostic facts for pricing qualification while preserving the strict
+submission guard. Reports distinguish absent data from special pricing without storing
+raw values. 175 JVM tests and offline build passed. A session rejection during follow-up
+requires isolated-session validation; direct acceptance remains disabled.
+
 ## 1.5.6-preview — 2026-10-24
 
 Corrected an unconditional discovery restriction that could hide candidates before local
