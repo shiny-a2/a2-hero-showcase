@@ -4,6 +4,20 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.0-preview — 2026-10-24
+
+Added a priority queue that preserves request pacing and server backoff, monotonic
+preparation deadlines, separate queue/network timings and bounded submission-result
+follow-up. Exact matching evidence is retained without inventing a loss from a missing
+row or replaying an ambiguous write. Reconciled history no longer permanently blocks
+return to the existing screen engine.
+
+Validation: 147 JVM tests and the offline debug build passed. Installed in place;
+one explicit connection check succeeded and the empty review state was exercised.
+Real acceptance timing, full allocation semantics, independent push enrollment,
+authoritative calendar synchronization and sustained-session validation remain open.
+Automatic direct acceptance remains compiled off; this is not a final release.
+
 ## 1.4.4-preview — 2026-10-24
 
 Corrected expert-account role recognition using authenticated response evidence and
