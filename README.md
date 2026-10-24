@@ -4,6 +4,16 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.12-preview — 2026-10-24
+
+Added an explicitly armed, session-bound single-submission trial while retaining strict
+eligibility and fresh-data checks. Its durable allowance is consumed before dispatch;
+restarts and repeated arming cannot replenish it. Ambiguous outcomes are not replayed,
+and bounded account reconciliation cannot treat absence as a proven failure.
+
+190 JVM tests and offline build passed. Continuous acceptance remains disabled; real
+eligible submission and allocation are still pending. No customer data is published.
+
 ## 1.5.11-preview — 2026-10-24
 
 Added categorized local notifications and a bounded in-app event history. Match discovery,
