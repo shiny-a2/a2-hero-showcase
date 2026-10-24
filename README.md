@@ -4,6 +4,16 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.18-preview — 2026-10-24
+
+Corrected an overly broad eligibility restriction that treated all nonempty display-label
+lists as special pricing. Typed labels no longer reject an otherwise supported request;
+explicit pricing flags, malformed-data rejection, user filters and the bounded trial
+remain intact. Diagnostics retain structural states only, never label contents.
+
+214 JVM tests and offline build passed, including malformed labels and special-pricing
+regressions. Installed on the test device; real eligible allocation remains unverified.
+
 ## 1.5.17-preview — 2026-10-24
 
 Prioritized already-due prepared work before new discovery reads and postponed background
