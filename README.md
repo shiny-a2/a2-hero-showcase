@@ -4,6 +4,18 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.29-preview — 2026-10-24
+
+Added clear settings/account login states based on recent evidence for the current session:
+green for recently verified, red for missing, and neutral for stored but unconfirmed.
+A user-triggered shortcut reuses the existing SMS login flow and locally saved phone,
+with permission handling, manual fallback and cooldown retained. Opening settings alone
+does not request a code; existing sessions use a bounded connection check instead.
+
+264 JVM tests and the offline build passed, including stale evidence, session replacement
+and clock anomalies. The installed app displayed verified status after a successful
+connection check. No live logout or extra SMS request was used for testing.
+
 ## 1.5.28-preview — 2026-10-24
 
 Separated monitoring settings and technical diagnostics from the work dashboard.
