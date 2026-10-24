@@ -13,9 +13,8 @@ replenishing consumed attempts or bypassing session/generation checks.
 
 Clarified that working hours describe the scheduled job start, not discovery time.
 266 JVM tests and the offline build passed, including overnight discovery for next-day
-work and working-window boundaries. Device start/stop checks passed; a provider 503
-prevented confirming fresh-session trial readiness during the check. Existing backoff is
-retained. Continuous acceptance remains disabled; real eligible
+work and working-window boundaries. Device start/stop checks passed. A transient provider 503 recovered with
+existing backoff; fresh list reads and current-session trial readiness were verified. Continuous acceptance remains disabled; real eligible
 allocation still requires qualification.
 
 ## 1.5.29-preview — 2026-10-24
