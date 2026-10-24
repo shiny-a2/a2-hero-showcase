@@ -4,6 +4,18 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.16-preview — 2026-10-24
+
+Added a paginated read-only conversation view, generic unread-message notices and
+fresh-data visit reminders. Message content stays transient; notification history stores
+fixed labels only. Background maintenance alternates bounded reads during idle periods.
+This reduces redundant checks but does not provide immediate push or offline reminders.
+
+210 JVM tests and offline build passed. Authenticated conversation and message reads
+succeeded on-device, and the conversation view was inspected at large font size.
+Sending, attachments, real reminder events and actual eligible allocation remain
+unqualified or incomplete. No customer message was sent for testing.
+
 ## 1.5.15-preview — 2026-10-24
 
 Added exact explicit-cancellation display and transition notifications. Missing jobs,
