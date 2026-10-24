@@ -4,6 +4,15 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.3-preview — 2026-10-24
+
+Added passive channel-arrival comparisons without additional network traffic. Anonymous
+timing differences are retained only for matching identity candidates; identifiers stay
+in bounded expiring process memory. Duplicate observations do not manufacture samples.
+
+Validation: 164 JVM tests and offline build passed. Real identity mapping and matched-job
+timing remain unqualified; no claim of earlier server delivery or guaranteed acceptance.
+
 ## 1.5.2-preview — 2026-10-24
 
 Added explicitly enabled automatic read-only observation alongside the existing screen
