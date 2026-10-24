@@ -4,6 +4,15 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.4.2-preview — 2026-10-24
+
+Made screen observation event-responsive while preserving timeout fallback, loading
+deadlines and action spacing. This removes an avoidable fixed wait after eligible
+screen changes without increasing network polling or weakening eligibility checks.
+
+Validation: 121 JVM tests and an offline debug build passed. Live-job latency gains
+remain unmeasured; there is no priority guarantee. Direct acceptance remains disabled.
+
 ## 1.4.1-preview — 2026-10-24
 
 Refreshed the native dark interface with grouped job cards, collapsible secondary
