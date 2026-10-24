@@ -4,6 +4,16 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.26-preview — 2026-10-24
+
+Hardened acceptance-result classification against nested JSON, inconsistent message fields
+and malformed identities. Proposal submission stays distinct from allocation; contradictory
+or unrecognized evidence remains unknown for later reconciliation, without authorizing
+another write. Existing screen-text classification is unchanged.
+
+250 JVM tests and offline build passed, including typed-response and contradiction cases.
+Real provider acceptance responses and allocation remain unqualified.
+
 ## 1.5.25-preview — 2026-10-24
 
 Corrected duplicate structured brand answers being concatenated into an unmatched value.
