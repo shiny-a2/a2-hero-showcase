@@ -4,6 +4,14 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.10-preview — 2026-10-24
+
+Reduced successful discovery and shared post-request pauses to 500 ms at the user's
+request. Requests remain serialized with server-error backoff. Actual intervals include
+network time; the change increases traffic and does not guarantee first arrival.
+184 JVM tests and offline build passed. Direct acceptance remains disabled pending live
+eligible-job and outcome qualification.
+
 ## Qualification follow-up — 2026-10-24
 
 A fresh bounded discovery read succeeded with an empty first page. No detail or mutation
