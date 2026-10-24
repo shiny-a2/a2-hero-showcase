@@ -4,6 +4,20 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.30-preview — 2026-10-24
+
+Corrected the main monitoring button to start/stop the selected direct engine instead of
+opening a control screen. Its visible state now follows the engine state. An explicit start
+requests the existing bounded acceptance trial after account qualification, without
+replenishing consumed attempts or bypassing session/generation checks.
+
+Clarified that working hours describe the scheduled job start, not discovery time.
+266 JVM tests and the offline build passed, including overnight discovery for next-day
+work and working-window boundaries. Device start/stop checks passed; a provider 503
+prevented confirming fresh-session trial readiness during the check. Existing backoff is
+retained. Continuous acceptance remains disabled; real eligible
+allocation still requires qualification.
+
 ## 1.5.29-preview — 2026-10-24
 
 Added clear settings/account login states based on recent evidence for the current session:
