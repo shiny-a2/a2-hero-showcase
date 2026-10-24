@@ -4,6 +4,17 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.20-preview — 2026-10-24
+
+Prepared deadlines now survive read-budget deferral and transient read errors within a
+running service. Deferred dispatch stops without spinning. Terminal rejection and final
+write dispatch remove deadlines; durable write protection continues to prevent ambiguous
+submission replay. This improves pending-work reliability without increasing polling.
+
+221 JVM tests and offline build passed, including deferral, failure and rescheduling
+regressions. The deadline queue is not persistent across process death. Live eligible
+allocation remains unverified.
+
 ## 1.5.19-preview — 2026-10-24
 
 Separated unknown location data from unselected districts, and expired starts from
