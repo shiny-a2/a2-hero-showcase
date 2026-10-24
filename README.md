@@ -4,6 +4,16 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.1-preview — 2026-10-24
+
+Added an explicit bounded contract probe: one list page and at most one detail, with
+manual cooldown and fixed-label diagnostic facts that exclude customer values.
+This helps identify missing contract evidence without enabling automatic acceptance.
+
+Validation: 153 JVM tests and offline build passed; installed and exercised on device.
+The live list was empty, so real detail and acceptance remain unverified. Accessibility
+binding was checked after installation. Direct automatic acceptance remains compiled off.
+
 ## 1.5.0-preview — 2026-10-24
 
 Added a priority queue that preserves request pacing and server backoff, monotonic
