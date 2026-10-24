@@ -6,6 +6,10 @@ device identifiers, account details, request content, and diagnostics are exclud
 
 ## 1.5.21-preview — 2026-10-24
 
+Follow-up device check: after abrupt process termination, Android restarted the app and
+successful background reads resumed without manual relaunch. This single observation
+does not qualify reboot, force-stop, prolonged outages or crash recovery during a write.
+
 Connected existing ongoing-job reads to durable pending-submission reconciliation. Exact
 matches produce a separate generic notice while preserving the original outcome and
 duplicate protection. Empty or unrelated pages remain inconclusive. No additional reads
