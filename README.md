@@ -4,6 +4,14 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## Device validation follow-up — 2026-10-24
+
+Verified an existing session through a bounded read, exercised observer stop and
+return-to-screen controls, and inspected key portrait screens at the device's large
+text setting. Accessibility was confirmed enabled and bound at the end. No incoming
+job was available; account qualification and live allocation remain unresolved.
+No direct acceptance was performed. This is still a preview, not final certification.
+
 ## 1.4.3-preview — 2026-10-24
 
 Prioritized front-page analysis before pagination I/O while preserving a bounded
