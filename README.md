@@ -4,6 +4,20 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.27-preview — 2026-10-24
+
+Added searchable neighborhood selections using an authoritative location catalogue,
+with conservative migration from existing district preferences. Exact city/name matching
+rejects ambiguous or unknown locations; an empty selection permits no requests.
+Local catalogue caching avoids repeated network reads during filtering. Existing brand,
+schedule and guarded-submission rules remain in force. Neighborhood filtering requires
+structured direct data, so the older screen-only acceptance path is blocked in this mode.
+
+260 JVM tests and offline builds passed. Device checks covered catalogue retrieval,
+selection migration, search, selection changes and persistence. Both system theme settings
+were inspected; the app retains its existing dark palette. Real eligible allocation remains
+unqualified and continuous acceptance remains disabled.
+
 ## 1.5.26-preview — 2026-10-24
 
 Hardened acceptance-result classification against nested JSON, inconsistent message fields
