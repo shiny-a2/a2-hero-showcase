@@ -4,6 +4,17 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.4.4-preview — 2026-10-24
+
+Corrected expert-account role recognition using authenticated response evidence and
+added a bounded on-device qualification runner with explicit network opt-in and
+redacted output. Unknown and corporate account states remain excluded.
+
+All 132 JVM tests and offline builds passed; the updated preview was installed.
+A rejected session required one explicit sign-in; the new session passed a bounded
+read with no incoming jobs. Long-term session stability and live direct acceptance
+remain unqualified. No direct job submission or independent push enrollment occurred.
+
 ## Push feasibility review — 2026-10-24
 
 Read-only review identified an additional persistent messaging transport beyond the
