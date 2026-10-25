@@ -4,6 +4,17 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.41-preview — 2026-10-25
+
+Corrected completion routing after deeper contract review: the endpoint identity and
+body identity are distinct and are now bound to fresh assigned-job details. Missing,
+unsafe or changed identities fail before dispatch. Explicit confirmation and durable
+duplicate protection remain in place.
+
+328 JVM tests and offline build passed. No real completion was performed for testing;
+this correction does not claim to resolve historical submission permission failures.
+Implementation is independent; no provider source is included.
+
 ## Compatibility review — 2026-10-25
 
 Completed a read-only comparison against the installed provider version. Reviewed
