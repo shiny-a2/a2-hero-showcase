@@ -4,6 +4,16 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.33-preview — 2026-10-25
+
+Added a live, local request timeline with Persian timestamps and explicit decision reasons.
+Discovery, filter rejection, waiting, submission and confirmed allocation are distinct;
+proposal submission and ambiguous results never imply a won job.
+
+The bounded history avoids repeated-read noise and stores no contacts, tokens or raw
+responses. Viewing it adds no provider traffic. 287 JVM tests and offline builds passed,
+covering retention, corrupt input, duplicate observations and outcome preservation.
+
 ## 1.5.32-preview — 2026-10-25
 
 Localized visible dates and the completion date picker to the Persian calendar with
