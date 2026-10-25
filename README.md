@@ -4,6 +4,14 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.46-preview — 2026-10-25
+
+Made calendar and working hours directly discoverable beside the main filters.
+The existing calendar now edits arrival-start hours and day/date availability in
+one draft, saved atomically. Invalid time ranges leave the previous settings intact.
+356 JVM tests and offline builds passed; emulator draft/save/reopen and schedule
+validation checks passed. The frozen acceptance engine remains unchanged.
+
 ## 1.5.45-preview — 2026-10-25
 
 Reorganized the main screen around monitoring status, full-width navigation and
