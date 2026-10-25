@@ -4,6 +4,19 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.47-preview — 2026-10-25
+
+Unified Persian typography in reports, dialogs and job headings; added the requested
+main-heading emoji. Job navigation now uses a section picker, compact auxiliary
+actions and conditional paging. Customer statistics use distinct financial panels,
+while unknown costs/profit remain explicit. The legacy performance report identifies
+its data source separately from API events. Screen-only controls are hidden in API
+mode, while the shared battery control and API calendar remain available.
+
+356 JVM tests and offline builds passed. Local ledger checks and emulator visual
+inspection do not send real messages or complete live jobs. The acceptance engine
+and API submission contract remain unchanged.
+
 ## 1.5.46-preview — 2026-10-25
 
 Made calendar and working hours directly discoverable beside the main filters.
