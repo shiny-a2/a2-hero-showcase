@@ -4,6 +4,16 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.38-preview — 2026-10-25
+
+Added a work desk with job/conversation/report navigation and an authenticated read-only
+financial summary. Debt/credit, limits and income/reward summaries show explicit unknown
+states when missing. A dedicated restricted client mode supports only summary reads;
+payment, withdrawal and settlement are not enabled.
+
+312 JVM tests and offline builds passed. The installed app received a successful summary
+response and the populated page was inspected on device. No account values are published.
+
 ## 1.5.37-preview — 2026-10-25
 
 Reuse recently validated details rather than always issuing a second fetch before
