@@ -4,6 +4,16 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.40-preview — 2026-10-25
+
+Reviewed discovery-to-submission scheduling and error reporting. Distinguish unreadable,
+oversized and empty errors, handle array-shaped errors and retain only known explicit
+codes. Separate local analysis and dispatch-lateness metrics from network time. Receipt
+timing now precedes bookkeeping without shortening server waits or increasing polling.
+
+323 JVM tests and offline build passed. Serialized in-flight requests remain a latency
+constraint; unknown server causes and live allocation are not represented as resolved.
+
 ## 1.5.39-preview — 2026-10-25
 
 Added bounded, privacy-conscious device diagnostics with request correlation, fixed
