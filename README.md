@@ -4,6 +4,16 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.35-preview — 2026-10-25
+
+Distinguish incomplete input from a confirmed filter mismatch. Fixed diagnostic labels
+identify missing, empty, malformed or conflicting input without retaining raw customer
+addresses or question text. Two bounded early rereads can recover temporarily incomplete
+details while the request remains listed, within the existing detail-read budget.
+
+301 JVM tests and offline builds passed. Historical incomplete responses cannot be
+reconstructed from old structural logs; recovery and live acceptance remain unverified.
+
 ## 1.5.34-preview — 2026-10-25
 
 An additional afternoon-visit regression verifies Persian-date eligibility before and
