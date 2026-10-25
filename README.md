@@ -4,6 +4,19 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## Screen recovery preview — 2026-10-25
+
+Prepared a separately installable recovery package from the preserved pre-API screen
+engine. It observes live accessibility changes, refreshes the provider list and uses
+screen-based acceptance; notification standby is off by default. The independent
+package preserves the API app and contains no API client or INTERNET permission.
+
+Settings are independent and use numbered districts rather than the API neighborhood
+catalogue. Users must stop one engine before starting the other and review filters.
+The APK signature and package were verified; all 25 inherited JVM tests and the offline
+build passed. Installation and compatibility with the current provider UI remain untested
+because the phone was unavailable. This is not a claim of a production-qualified fallback.
+
 ## 1.5.35-preview — 2026-10-25
 
 Distinguish incomplete input from a confirmed filter mismatch. Fixed diagnostic labels
