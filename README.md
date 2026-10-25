@@ -4,6 +4,28 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.43-preview — 2026-10-25
+
+Added a private on-device customer ledger: conservative spreadsheet cleanup with
+original-row preservation, idempotent import, exact-mobile customer histories,
+editable visits, stored locations, search/filter summaries and explicit backup.
+Confirmed job completion can add a visit, while existing-customer badges require
+matching contact data. New visits appear first. Explicit income/cost fields support
+per-visit and filtered profit totals without treating missing costs as zero.
+Applied owner-provided Persian typography; the existing acceptance engine remains
+unchanged, with a recorded rollback baseline.
+
+User-confirmed SIM SMS campaigns include recipient deduplication, text/part-count
+preview, permission checks and durable dispatch accounting. Unknown outcomes are
+not automatically retried. No marketing SMS is sent by import or completion.
+
+356 JVM tests and offline builds passed. Emulator tests exercise local import,
+editing and callback accounting; forms and final preview were inspected without
+sending real messages. Device import and aggregate reconciliation were checked.
+Live telephony delivery and completion remain unqualified; server-denied acceptance
+outcomes are not claimed fixed. The prior working-day calendar is included in this
+device update. No customer data or private implementation artifacts are published.
+
 ## 1.5.42-preview — 2026-10-25
 
 Added a Persian working-day calendar for the independent engine: recurring weekday
