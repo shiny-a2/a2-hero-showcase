@@ -4,6 +4,16 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.42-preview — 2026-10-25
+
+Added a Persian working-day calendar for the independent engine: recurring weekday
+selection and explicit date exclusions, applied to visit dates rather than discovery
+times. Draft edits require Save; defaults preserve current availability. Final dispatch
+rechecks the schedule, and existing accepted jobs are not cancelled.
+
+337 JVM tests passed. Emulator interaction verified draft/save/reopen behavior and
+calendar layout. Physical-device deployment is pending, preserving ongoing monitoring.
+
 ## 1.5.41-preview — 2026-10-25
 
 Corrected completion routing after deeper contract review: the endpoint identity and
