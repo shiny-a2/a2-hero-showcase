@@ -6,6 +6,9 @@ device identifiers, account details, request content, and diagnostics are exclud
 
 ## 1.5.34-preview — 2026-10-25
 
+An additional afternoon-visit regression verifies Persian-date eligibility before and
+during the arrival window, plus exact expiry; the suite now passes 296 JVM tests.
+
 Follow-up: full cached-catalogue audit passed 2,826 matching checks across 849 records.
 Additional synthetic area and visit-window regressions bring the JVM suite to 295 tests.
 This test-only update does not change the installed application or claim a live allocation.
