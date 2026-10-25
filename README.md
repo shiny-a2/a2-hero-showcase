@@ -4,6 +4,16 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.32-preview — 2026-10-25
+
+Localized visible dates and the completion date picker to the Persian calendar with
+Persian digits, while preserving service timestamps and acceptance behavior.
+Month lengths and leap days are validated before converting a chosen date.
+
+283 JVM tests passed, including ten years of daily conversion round trips and calendar
+boundaries. The offline build was installed and the Persian picker inspected on device
+with a synthetic form; no financial action was submitted for this check.
+
 ## 1.5.31-preview — 2026-10-25
 
 Corrected arrival-window eligibility so a passed opening time alone does not discard a
