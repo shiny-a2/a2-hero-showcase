@@ -4,6 +4,16 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.34-preview — 2026-10-25
+
+Fixed false rejections caused by duplicate neighborhood catalogue identities and by
+Persian-year visit timestamps being read as Gregorian dates. Exact duplicate matches
+require all matching selections; ambiguous or partially selected areas remain blocked.
+
+293 JVM tests and offline builds passed, including synthetic reproductions, local-clock
+conversion, invalid dates and retained filter restrictions. Historical decisions remain
+an accurate record of what happened rather than being rewritten after the fix.
+
 ## 1.5.33-preview — 2026-10-25
 
 Added a live, local request timeline with Persian timestamps and explicit decision reasons.
