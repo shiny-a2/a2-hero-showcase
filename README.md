@@ -4,6 +4,14 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.44-preview — 2026-10-25
+
+Simplified the customer ledger by collapsing search and filters under one control,
+with apply/reset behavior and an active-filter marker. Financial summaries now live
+in the statistics dialog, leaving more space for customer cards at larger font sizes.
+356 JVM tests and offline build passed; filter states and statistics were inspected.
+The existing acceptance engine remains unchanged.
+
 ## 1.5.43-preview — 2026-10-25
 
 Added a private on-device customer ledger: conservative spreadsheet cleanup with
