@@ -4,6 +4,15 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## Compatibility review — 2026-10-25
+
+Completed a read-only comparison against the installed provider version. Reviewed
+identity routing, individual/account variants, pricing, waiting, error handling and
+the two-stage completion flow. Documented supported subsets and unresolved server
+compatibility questions. Static matching is not presented as proof of authorization
+or successful live allocation. No third-party source, account data or security material
+is included in this repository; this review does not deploy a new application version.
+
 ## 1.5.40-preview — 2026-10-25
 
 Reviewed discovery-to-submission scheduling and error reporting. Distinguish unreadable,
