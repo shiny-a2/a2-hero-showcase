@@ -4,6 +4,18 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.39-preview — 2026-10-25
+
+Added bounded, privacy-conscious device diagnostics with request correlation, fixed
+HTTP error categories, filter snapshots and completion-stage tracing. A technical
+viewer and read-only USB tool support later investigations without raw customer or
+session data. Region decisions now distinguish explicit outskirts from unresolved
+numbered districts; failed writes display their HTTP status.
+
+319 JVM tests and offline builds passed. Historical server-denied writes remain
+unconfirmed and protected against replay. Diagnostics improve evidence collection;
+they do not establish that server permissions or live allocation are fixed.
+
 ## 1.5.38-preview — 2026-10-25
 
 Added a work desk with job/conversation/report navigation and an authenticated read-only
