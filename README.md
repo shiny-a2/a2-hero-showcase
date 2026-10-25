@@ -4,6 +4,16 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.36-preview — 2026-10-25
+
+Added an explicitly requested temporary numbered-district mode with a visible policy
+selector. Existing district selections are reused and neighborhood choices remain saved.
+Empty selections allow no districts; missing location evidence is not treated as a match.
+Other eligibility and submission checks remain active.
+
+305 JVM tests and offline builds passed. Device installation and UI validation are pending
+because the phone is disconnected. This release does not claim a live allocation.
+
 ## Screen recovery preview — 2026-10-25
 
 Prepared a separately installable recovery package from the preserved pre-API screen
