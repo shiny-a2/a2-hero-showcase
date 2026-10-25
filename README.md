@@ -4,6 +4,17 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.45-preview — 2026-10-25
+
+Reorganized the main screen around monitoring status, full-width navigation and
+account settings. Added accessible icon-led desk cards, stacked customer actions,
+and separate search/tool dialogs with Persian typography. Existing control IDs and
+the established acceptance engine are preserved.
+
+356 JVM tests and offline builds passed. Emulator interaction and larger-font
+layouts were inspected. Physical-device installation completed after reconnection and monitoring resumed;
+no additional live acceptance or financial qualification is claimed.
+
 ## 1.5.44-preview — 2026-10-25
 
 Simplified the customer ledger by collapsing search and filters under one control,
