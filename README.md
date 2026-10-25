@@ -6,6 +6,10 @@ device identifiers, account details, request content, and diagnostics are exclud
 
 ## 1.5.34-preview — 2026-10-25
 
+Follow-up: full cached-catalogue audit passed 2,826 matching checks across 849 records.
+Additional synthetic area and visit-window regressions bring the JVM suite to 295 tests.
+This test-only update does not change the installed application or claim a live allocation.
+
 Fixed false rejections caused by duplicate neighborhood catalogue identities and by
 Persian-year visit timestamps being read as Gregorian dates. Exact duplicate matches
 require all matching selections; ambiguous or partially selected areas remain blocked.
