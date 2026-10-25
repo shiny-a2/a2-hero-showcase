@@ -4,6 +4,25 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.31-preview — 2026-10-25
+
+Corrected arrival-window eligibility so a passed opening time alone does not discard a
+still-actionable job within configured working hours. Preserved other user filters and
+added bounded timing diagnostics without raw customer data. Requested monitoring now
+resumes after sign-in, while an explicit stop or logout remains respected.
+
+Added a user-confirmed job-completion flow with actual-time/cost entry, server price
+preview, current-job checks and durable protection against duplicate ambiguous writes.
+Unsupported contract/payment schemes remain blocked. No financial action runs on opening.
+
+Continued acceptance is now enabled by explicit user authorization, retaining fresh-detail,
+session, filter, waiting and durable duplicate guards. Unknown writes are not replayed.
+
+280 JVM tests and offline builds passed. Device checks covered monitor-resumption rules
+and a synthetic no-order completion form with date/time controls. No real job or billing
+record was changed for testing. Live completion/settlement and eligible automatic allocation
+remain unverified; operation is user-authorized, not a claim of end-to-end qualification.
+
 ## 1.5.30-preview — 2026-10-24
 
 Corrected the main monitoring button to start/stop the selected direct engine instead of
