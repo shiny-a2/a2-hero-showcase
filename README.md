@@ -4,6 +4,15 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.37-preview — 2026-10-25
+
+Reuse recently validated details rather than always issuing a second fetch before
+submission. The 60-second freshness limit, server waiting and final local eligibility,
+session and duplicate guards remain enforced. Per-order disappearance no longer causes
+global connectivity backoff. Combined generic-brand labels require both user selections.
+
+308 JVM tests and offline builds passed. No historical recovery or live allocation is claimed.
+
 ## 1.5.36-preview — 2026-10-25
 
 Added an explicitly requested temporary numbered-district mode with a visible policy
