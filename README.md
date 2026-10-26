@@ -4,6 +4,20 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.49-preview — 2026-10-26
+
+Added a bounded local request-history archive, separate from completed-service
+records. Repeated observations update one summary, preserving prior outcomes.
+Known phone hashes support returning-request labels; matching never relies on an
+address alone. Search, incremental display and confirmed deletion make the archive
+manageable. Unaccepted requests do not enter marketing recipient lists.
+
+368 JVM tests and offline builds passed. Emulator validation covered deduplication,
+outcome preservation, retention, deletion and navigation. Physical-device deployment
+is pending reconnection. Existing acceptance behavior remains unchanged; no extra
+network calls, live completion tests or messages were introduced. Archive writes
+are best-effort and local only, with a maximum of 2,000 retained requests.
+
 ## 1.5.48-preview — 2026-10-26
 
 Added a passive integration review to help investigate reservation limits, contact
