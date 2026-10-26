@@ -4,6 +4,13 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.54-preview — 2026-10-26
+
+- Replace repeated customer-card actions and nested history dialogs with compact cards and a dedicated customer profile. Contact/address, selectable service history and the selected visit's finances have distinct sections. Information and financial editors return to the profile and reload current local data.
+- Group service-edit fields and financial inputs, keep invoice references behind a disclosure, and move expense deletion into the item editor with confirmation. Preserve local financial calculations and provider snapshots.
+- Reorganize the management dashboard around the selected Persian date range and a financial summary. Expense details and bounded request-performance figures expand on demand; missing values and coverage remain explicit.
+- Validation: 394 JVM tests and offline builds passed. Emulator checks covered financial persistence/calculation, profile/editor navigation and enlarged-font dashboard presentation. Physical-device testing exposed an Android ListView footer layout-parameter incompatibility; corrected it and reinstalled, then verified customer-list and profile navigation. Monitoring was restored and fresh successful reads verified. No real customer values, calls, SMS or financial transactions were created for testing. Acceptance and financial calculation modules are unchanged.
+
 ## 1.5.53-preview — 2026-10-26
 
 - Simplify the home screen by keeping detailed financial totals in the existing management dashboard and collapsing account settings. Monitoring controls, filters and dashboard access remain available.
