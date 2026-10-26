@@ -15,7 +15,7 @@ Stopped-monitoring explanations require an actual observed list item or request
 notification, without inventing missed requests or overwriting prior outcomes.
 375 JVM tests passed, with emulator checks for record deduplication, manual edit
 preservation, completion upgrades and bounded archive retention. Acceptance engine
-files remain unchanged. Physical-device installation is pending unlock.
+files remain unchanged. The update was installed on the physical device and monitoring resumed successfully. An owner-approved local date correction was verified while preserving original source values.
 
 ## 1.5.49-preview — 2026-10-26
 
