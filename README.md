@@ -4,6 +4,20 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.48-preview — 2026-10-26
+
+Added a passive integration review to help investigate reservation limits, contact
+field availability before acceptance and authentication/access failures. It observes
+existing traffic and stores presence flags rather than customer values. Completion
+failures remain distinct from rejected acceptance; rate limits are not presented as
+reservation limits. The bounded local evidence window makes unknowns explicit.
+
+362 JVM tests and the offline build passed. The update was installed and its report
+inspected on the physical device; monitoring resumed successfully. The acceptance
+engine remains unchanged. No additional polling, session impersonation, quota
+bypass, real-message test or live completion test was introduced. Server quota
+attribution and concurrent-session compatibility remain unverified.
+
 ## 1.5.47-preview — 2026-10-25
 
 Unified Persian typography in reports, dialogs and job headings; added the requested
