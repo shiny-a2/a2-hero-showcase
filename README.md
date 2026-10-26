@@ -4,6 +4,26 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.52-preview — 2026-10-26
+
+Added itemized service accounting and a management summary on the home screen.
+Parts, helper labor, travel and other expenses have separate titled amounts; extra
+billable labor remains distinct from money actually collected. Known commission
+and complete costs are required for net-receipt calculations, with manual overrides
+and explicit unknown values. Available neighborhood names appear on customer cards.
+
+The management dashboard supports today, yesterday, Saturday-based weeks, Jalali
+months and inclusive custom Persian-calendar ranges. It reports contributing-record
+coverage, missing dates, expense breakdown and bounded recent acceptance metrics.
+Known inquiry figures are retained after confirmed completion; invoice values never
+stand in for payment receipts. No new financial API writes or polling were added.
+
+394 JVM tests and offline builds passed. Emulator storage/calculation checks and
+editor/dashboard interaction checks passed. Installed on the physical device;
+initial connection timeouts recovered through the existing fallback and fresh reads
+succeeded. No real financial transaction, completion or SMS was performed to test.
+Live settlement behavior remains unqualified; actual collected money remains manual.
+
 ## 1.5.51-preview — 2026-10-26
 
 Added actionable cancellation notices: a known customer can be declined for the
