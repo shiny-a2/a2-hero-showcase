@@ -4,6 +4,12 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.53-preview — 2026-10-26
+
+- Simplify the home screen by keeping detailed financial totals in the existing management dashboard and collapsing account settings. Monitoring controls, filters and dashboard access remain available.
+- Make the existing financial editor explicit on customer cards and accessible from each visit in customer history. Received money, manual commission, legacy costs and individual expense items remain editable locally; provider invoice snapshots are unchanged.
+- Validation: 394 JVM tests and offline debug build passed. Installed on the physical device; inspected the home screen and opened the editable financial fields without changing customer records. Monitoring was restored and a fresh successful read was verified. Acceptance logic and financial persistence are unchanged; no live completion or financial transaction was tested.
+
 ## 1.5.52-preview — 2026-10-26
 
 Added itemized service accounting and a management summary on the home screen.
