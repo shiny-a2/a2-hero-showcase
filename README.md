@@ -4,6 +4,19 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.50-preview — 2026-10-26
+
+Confirmed allocations now create customer records automatically. Later reads fill
+missing fields while preserving manual edits; confirmed completion upgrades the
+same record. Assigned work is explicitly distinguished from previous completed
+service. Service descriptions gain editable suggestions alongside city and device.
+
+Stopped-monitoring explanations require an actual observed list item or request
+notification, without inventing missed requests or overwriting prior outcomes.
+375 JVM tests passed, with emulator checks for record deduplication, manual edit
+preservation, completion upgrades and bounded archive retention. Acceptance engine
+files remain unchanged. Physical-device installation is pending unlock.
+
 ## 1.5.49-preview — 2026-10-26
 
 Added a bounded local request-history archive, separate from completed-service
