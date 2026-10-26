@@ -4,6 +4,20 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.51-preview — 2026-10-26
+
+Added actionable cancellation notices: a known customer can be declined for the
+current business day, with a final local check before submission. Explicit Yes
+restores ordinary filter-based consideration. Unknown identities receive an honest
+explanation; addresses are never used to guess identity. Repeated observations do
+not repeat the prompt, and choices/actions expire at Tehran midnight.
+
+382 JVM tests passed. Emulator checks exercised notification actions, duplicate
+suppression and unknown-identity handling without network traffic. The release was
+installed on the physical device with monitoring active. No additional polling,
+quota bypass or replay of previously submitted orders was introduced. Anonymous
+rebookings cannot be reliably matched or blocked.
+
 ## 1.5.50-preview — 2026-10-26
 
 Confirmed allocations now create customer records automatically. Later reads fill
