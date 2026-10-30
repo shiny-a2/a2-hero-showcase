@@ -4,6 +4,21 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.56-preview — 2026-10-30
+
+Fixed a neighborhood-label mismatch that rejected an explicitly selected area when
+incoming data appended a known district description. Matching now resolves that
+format to the exact same-city catalogue identity. Unselected or unknown areas,
+city controls, brand and visit-time filters remain enforced. Stored selections and
+submission behavior are unchanged.
+
+418 JVM tests and the offline APK build passed. Eight new regression tests cover
+structured input through eligibility, exact identity matching and denial cases.
+Installed on the connected device with unchanged filters and resumed monitoring;
+the installed build hash and fresh successful reads were verified. No new matching
+allocation was observed to qualify live acceptance. No real transaction was created
+for validation, and no acceptance guarantee is made.
+
 ## 1.5.55-preview — 2026-10-30
 
 Fixed two issues found through retained operational logs: a slow discovery read could delay an already prepared action, and completion was incorrectly blocked by an appointment start time even when actual work had finished. Read operations now yield near a prepared deadline; write deduplication, required waiting and access/rate limits remain enforced. Completion still requires real user-entered times, a price inquiry and explicit confirmation. A denied submission now leaves discovery running while pausing further writes with a clear status and notification; authentication/read denials still stop monitoring.
