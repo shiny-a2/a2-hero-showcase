@@ -4,6 +4,12 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.55-preview — 2026-10-30
+
+Fixed two issues found through retained operational logs: a slow discovery read could delay an already prepared action, and completion was incorrectly blocked by an appointment start time even when actual work had finished. Read operations now yield near a prepared deadline; write deduplication, required waiting and access/rate limits remain enforced. Completion still requires real user-entered times, a price inquiry and explicit confirmation. A denied submission now leaves discovery running while pausing further writes with a clear status and notification; authentication/read denials still stop monitoring.
+
+410 JVM tests passed, including a local slow-response test and denial/rate-limit precedence. Android instrumentation verified cancellation, one synthetic write and persistent denial scope without external traffic. The completion calendar preview was checked, and the update was installed on the connected device. Live settlement and the exact cause of historical server business rejections remain unverified. No real financial transaction was created for validation.
+
 ## 1.5.54-preview — 2026-10-26
 
 - Replace repeated customer-card actions and nested history dialogs with compact cards and a dedicated customer profile. Contact/address, selectable service history and the selected visit's finances have distinct sections. Information and financial editors return to the profile and reload current local data.
