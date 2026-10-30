@@ -4,6 +4,25 @@ A private Android application for user-configured monitoring and request handlin
 This repository contains sanitized engineering notes only. Production source,
 device identifiers, account details, request content, and diagnostics are excluded.
 
+## 1.5.57-preview — 2026-10-31
+
+Separate an explicitly recognized order loss from account-access failures so one
+unavailable request does not suspend unrelated eligible work. A rejected submission
+can receive one bounded status check after ready work; no submission is replayed.
+Unknown access denials, authentication and rate controls remain enforced.
+
+Private request details now show a short, redacted provider explanation. Messages
+are kept out of notifications and the diagnostic journal. Previously discarded
+explanations cannot be recovered or assigned a definitive cause.
+
+431 JVM tests and offline builds passed. Android transport tests covered consecutive
+order outcomes, status reconciliation, duplicate suppression, message retention and
+access pauses without external traffic. The report dialog was inspected at narrow
+and wide widths under both system theme settings, retaining the existing dark
+palette. The build was installed and hash-verified on the connected device; filters
+were preserved and monitoring resumed with fresh successful reads. Live acceptance
+after this update and completion settlement remain unverified.
+
 ## 1.5.56-preview — 2026-10-30
 
 Fixed a neighborhood-label mismatch that rejected an explicitly selected area when
